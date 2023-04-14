@@ -1,15 +1,22 @@
 console.log("hi");
 
+// toggling of nav
 var bars = document.getElementsByClassName("bars")[0];
 var toggleElm = document.getElementsByClassName("toggle")[0];
 
+console.log(bars);
+// bars.map((bar) => {
 bars.onclick = () => {
   console.log(bars);
   console.log(toggleElm);
 
   toggleElm.classList.toggle("toggle-on");
 };
+// });
 
+// ......................................................
+
+// Pop up--MODAL
 /// Get the modal
 var modal = document.getElementById("myModal");
 
