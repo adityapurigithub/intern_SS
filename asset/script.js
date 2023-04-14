@@ -1,5 +1,15 @@
 console.log("hi");
 
+var bars = document.getElementsByClassName("bars")[0];
+var toggleElm = document.getElementsByClassName("toggle")[0];
+
+bars.onclick = () => {
+  console.log(bars);
+  console.log(toggleElm);
+
+  toggleElm.classList.toggle("toggle-on");
+};
+
 /// Get the modal
 var modal = document.getElementById("myModal");
 

@@ -164,6 +164,7 @@ header {
   justify-content: space-between;
   position: fixed;
   z-index: 999;
+  font-size: 18px;
   align-items: center;
   width: 100%;
   height: 70px;
@@ -192,6 +193,56 @@ header nav li {
 header nav li:active {
   color: #33ce43;
 }
+
+header .toggle {
+  display: none;
+  position: relative;
+  border-bottom: 5px solid #e4ffae;
+}
+
+header .toggle .nav-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+header .toggle .nav-toggle li:hover {
+  border-radius: 30px;
+  background-color: #00670a;
+  transition: 0.5s ease-in-out;
+}
+
+header .toggle-on {
+  padding: 0;
+  width: 270px;
+  border-radius: 20px;
+  position: absolute;
+  top: 10%;
+  right: 1%;
+  display: flex;
+  flex-direction: column;
+  background-color: #00312e;
+}
+
+header .toggle .nav-toggle {
+  display: flex;
+  margin: 45px 0 15px 0;
+}
+
+header .bars {
+  display: none;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  object-fit: cover;
+  color: #3bf0e4;
+  cursor: pointer;
+  z-index: 10;
+}
+
 section.blog {
   width: 100%;
   float: left;
@@ -313,10 +364,8 @@ section.sponsors h4 {
   line-height: 96px;
 }
 section.content h1 {
-  font-size: 96px;
-  line-height: 96px;
-  margin-top: 45px;
-  margin-bottom: 25px;
+  line-height: 66px;
+  margin: 10px auto;
 }
 section.content p {
   margin-bottom: 15px;
@@ -537,14 +586,31 @@ section.profile .social svg {
   margin-right: 25px;
 }
 
+/* media-Query... */
 @media all and (max-width: 768px) {
   header nav li a {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
   .gradient-text {
-    font-size: 30px !important;
+    font-size: 40px !important;
   }
   .date {
+    display: none;
+  }
+  header {
+    padding: 0;
+  }
+  header nav {
+    display: none;
+  }
+
+  header .bars {
+    display: flex;
+  }
+}
+
+@media all and (min-width: 768px) {
+  header .toggle {
     display: none;
   }
 }
@@ -641,7 +707,7 @@ section.profile .social svg {
   cursor: pointer;
 }
 
-/* speakers................ */
+/* speakers-page................ */
 .speakers-list {
   display: flex;
   align-items: center;
@@ -652,21 +718,37 @@ section.profile .social svg {
 .speaker-card {
   position: relative;
 }
-.speaker-card .content {
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.speaker-card img {
+
+.speaker-card .speaker-img {
   width: 330px;
   height: 350px;
   object-fit: fill;
   border-radius: 20px;
   box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.4);
+  transition: 0.3s ease-in-out;
 }
 
-.speaker-card:hover + .content {
+.speaker-card .speaker-details {
+  opacity: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.6s ease-in-out;
+  font-weight: 700;
+  cursor: default;
+  text-align: center;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.speaker-img:hover {
+  opacity: 0.26;
+  outline: 1px solid #ffe57f;
+  outline-offset: 2px;
+  box-shadow: -3px -3px 5px 3px rgba(255, 255, 255, 0.9);
+}
+.speaker-img:hover + .speaker-details {
   opacity: 1;
 }
