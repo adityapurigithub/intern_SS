@@ -620,7 +620,7 @@ section.profile .social svg {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 999; /* Sit on top */
+  z-index: 99999; /* Sit on top */
   top: 50%;
   left: 50%;
   padding-top: 120px;

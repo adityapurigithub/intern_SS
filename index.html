@@ -8,10 +8,30 @@
   <body>
     <!-- modal..@ady -->
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
+    <!-- ContactUs Modal -->
+    <div id="contactModal" class="modal">
       <!-- Modal content -->
 
+      <form class="modal-content">
+        <span class="close">&times;</span>
+        <h1>Contact Us</h1>
+        <img
+          src="https://png.pngtree.com/png-vector/20201028/ourmid/pngtree-phone-icon-in-solid-circle-png-image_2380227.jpg"
+          alt="phoneIcon"
+        />
+        <input type="text" name="name" placeholder="Your Name..." />
+
+        <input type="email" name="email" placeholder="Your Email..." />
+
+        <input type="number" name="phone" placeholder="Your phone number..." />
+
+        <button>Contact</button>
+      </form>
+    </div>
+
+    <!-- Subscribe Model -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
       <form class="modal-content">
         <span class="close">&times;</span>
         <h1>Subscribe via Email</h1>
@@ -21,7 +41,8 @@
         />
         <input type="text" name="name" placeholder="Your Name..." />
 
-        <input type="text" name="email" placeholder="Your Email..." />
+        <input type="email" name="email" placeholder="Your Email..." />
+
         <button>Subscribe</button>
       </form>
     </div>
@@ -179,7 +200,7 @@
           Universe?
         </p>
         <br />
-        <a class="button"> CONTACT US </a>
+        <a id="contactUsBtn" class="button"> CONTACT US </a>
       </div>
     </section>
     <section class="updates">
