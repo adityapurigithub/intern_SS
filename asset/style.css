@@ -23,7 +23,7 @@ body {
 
 iframe {
   width: 90%;
-  height: 95%;
+  height: 90%;
   border-radius: 12px;
 }
 .sslogo {
@@ -616,7 +616,7 @@ section.profile .social svg {
   }
   iframe {
     width: 100%;
-    height: 60%;
+    height: 45%;
   }
   .container {
     padding: 30px 12px;
@@ -651,7 +651,7 @@ section.profile .social svg {
   background-color: rgb(242, 248, 248);
   color: #000;
   margin: auto;
-  padding: 80px 30px;
+  padding: 50px 30px;
   border: 1px solid #888;
   border-radius: 30px;
   width: 90%;
@@ -670,7 +670,9 @@ section.profile .social svg {
   color: #ff7170;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
-.modal-content input {
+
+.modal-content input,
+textarea {
   padding: 10px;
   margin: 5px;
   background-color: transparent;
@@ -765,4 +767,21 @@ section.profile .social svg {
 }
 .speaker-img:hover + .speaker-details {
   opacity: 1;
+}
+
+/* gallery.................................. */
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.images img {
+  height: 190px;
+  width: 280px;
+  object-fit: cover;
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3);
+  transition: 0.2s ease-in-out;
 }
