@@ -337,6 +337,7 @@ section.speakers {
   height: auto;
   background-color: #040303;
 }
+
 section.attends {
   text-align: center;
   display: inline-block;
@@ -564,6 +565,9 @@ ul.speaker-list li h4 {
 }
 ul.speaker-list li h5 {
   font-size: 20px;
+  max-width: 860px;
+  width: 90%;
+  margin: auto;
   color: #b5bfd2;
 }
 section.speakers h1 {
