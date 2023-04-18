@@ -80,7 +80,6 @@ var x = setInterval(function () {
 
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
-  console.log(distance);
 
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -99,3 +98,35 @@ var x = setInterval(function () {
   }
 }, 1000);
 // ......................
+
+// gallery slider.........................................................
+
+let slideIndex = 0;
+
+let imgs = document.getElementsByClassName("slideImg");
+
+if (imgs.length !== 0) {
+  show_img();
+}
+function show_img() {
+  let len = imgs.length;
+  console.log(imgs);
+
+  for (let i = 0; i < len; i++) {
+    //none display to all images...
+    imgs[i].style.display = "none";
+  }
+
+  imgs[slideIndex].style.display = "flex"; //after loop ....showing the image at that index
+  slideIndex++; //inc index...
+
+  // conditions....
+  if (slideIndex >= len) {
+    slideIndex = 0;
+  }
+  if (slideIndex < 0) {
+    slideIndex = len - 1;
+  }
+  setTimeout(show_img, 3500);
+}
+// .........................................................

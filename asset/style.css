@@ -51,6 +51,27 @@ iframe {
   width: 120px !important;
   object-fit: contain;
 }
+
+.slidingLanding {
+  position: relative;
+}
+.black-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9;
+}
+.slidingLandingPageContent {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 10;
+}
 img {
   border: 0px;
 }
@@ -815,6 +836,28 @@ textarea {
   object-fit: cover;
   box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3);
   transition: 0.2s ease-in-out;
+}
+
+.sliderContainer {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.sliderContainer .slideImg {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+.fade {
+  animation: fade 1s ease;
+}
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* schedule page.... */
