@@ -42,6 +42,11 @@ iframe {
   border-radius: 12px;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
+
+.dateTime {
+  display: flex;
+  gap: 28px;
+}
 .sslogo {
   width: 120px !important;
   object-fit: contain;
@@ -621,7 +626,11 @@ section.profile .social svg {
   .gradient-text {
     font-size: 40px !important;
   }
-  .dateTime {
+  .dateTime .date {
+    position: relative;
+    right: 80%;
+  }
+  .dateTime .timer {
     display: none;
   }
   header {
