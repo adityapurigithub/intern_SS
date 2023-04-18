@@ -6,12 +6,31 @@
     <link rel="stylesheet" href="asset/style.css" />
   </head>
   <body>
+    <!-- Subscribe Model -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <form class="modal-content">
+        <span id="closeSubscribe" class="close">&times;</span>
+        <h1>Subscribe via Email</h1>
+        <img
+          src="https://png.pngtree.com/png-vector/20190927/ourmid/pngtree-email-icon-png-image_1757854.jpg"
+          alt="emailIcon"
+        />
+        <input type="text" name="name" placeholder="Your Name..." />
+
+        <input type="email" name="email" placeholder="Your Email..." />
+
+        <button>Subscribe</button>
+      </form>
+    </div>
+
     <header>
       <a href="/">
         <img class="sslogo" src="asset/logo.png" />
       </a>
-      <div class="date">
-        <div class="time">July 22, 2023</div>
+      <div class="dateTime">
+        <div class="date">July 22, 2023</div>
+        <div class="timer"></div>
       </div>
 
       <nav>
